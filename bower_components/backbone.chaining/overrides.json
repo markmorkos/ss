@@ -1,0 +1,5 @@
+{
+    "renames": {
+        "backbone-chaining": "backbone.chaining"
+    }
+}

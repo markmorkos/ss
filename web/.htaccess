@@ -1,0 +1,18 @@
+
+<LimitExcept GET POST HEAD>
+  Order deny,allow
+  Allow from all
+</LimitExcept>
+
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks
+    RewriteEngine On
+
+    # Explicitly disable rewriting for front controllers
+    RewriteRule ^app.php - [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+
+    # Change below before deploying to production
+    RewriteRule ^(.*)$ /app.php [QSA,L]
+</IfModule>

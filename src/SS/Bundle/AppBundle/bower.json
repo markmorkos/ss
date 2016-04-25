@@ -1,0 +1,26 @@
+{
+  "name": "ss-app",
+  "main": [
+    "bower.json"
+  ],
+  "dependencies": {
+    "requirejs": "*",
+    "requirejs.plugins": "*",
+    "jquery": "*",
+    "lodash": "*",
+    "backbone": "*",
+    "backbone.relational": "*",
+    "backbone.chaining": "*",
+    "backbone.marionette": "*",
+    "backbone.modelbinder": "*",
+    "moment": "*",
+    "twig": "*",
+    "jquery.slick": "*",
+    "jquery-textrange": "1.3.3",
+    "jQuery.tabbable": "1.0.1",
+    "jquery.inputmask": "*"
+  },
+  "ignore": [
+    "**/*"
+  ]
+}

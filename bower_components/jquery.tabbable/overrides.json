@@ -1,0 +1,10 @@
+{
+  "renames": {
+    "jquery.tabbable": "jquery.tabbable"
+  },
+  "jQuery.tabbable": {
+    "main": [
+      "jquery.tabbable.js"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{% extends '::default.twig' %}
+
+{% trans_default_domain "MeestAppBundle" %}
+
+
+{% block pageBase %}
+    <aside class="aside error404">
+        <h1>404 error</h1>
+        <div class="text">
+            <p>Sorry, but there was some problem finding the page you requested. Maybe that page was moved or deleted. oe perhaps you just mistyped the adress. It happens.</p>
+        </div>
+        <h2>Why not try</h2>
+        <ul>
+            <li><a href="{{ path('home') }}">Go back to homepage</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Use a site-map</a></li>
+        </ul>
+        <h2>...or use a search form</h2>
+        <form action="#" class="search-form">
+            <fieldset>
+                <div class="input-row">
+                    <input type="text">
+                    <button type="submit" class="btn-search">Search</button>
+                </div>
+            </fieldset>
+        </form>
+    </aside>
+    <div id="content" class="content">
+        <div class="error404">
+            <div class="img-holder">
+                {#<img src="{{ asset('bundles/app/img_new/bg-error404.jpg') }}" height="274" width="559" alt="">#}
+            </div>
+            <h1>
+                Shhh!<br>
+                Looks like we lost something...
+            </h1>
+        </div>
+    </div>
+{% endblock %}

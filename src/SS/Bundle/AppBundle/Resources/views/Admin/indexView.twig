@@ -1,0 +1,11 @@
+<ul class="tabset">
+  {% for row in tab.children %}
+    <li class="{{ row.uri }} {{ row.active?'active':'' }} tab">
+      <a href="{{ row.getUrl() }}">
+        <i class="{{ row.attr.icon }}"></i>
+        <span class="nav-label">{{ row.title }}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+<div class="tab-content"></div>

@@ -1,0 +1,19 @@
+{
+  "name": "backbone.modelbinder",
+  "moduleType": [
+    "amd"
+  ],
+  "main": [
+    "backbone.modelbinder.js"
+  ],
+  "homepage": "https://github.com/Werkint/backbone-modelbinder",
+  "_release": "853fc00d06",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "853fc00d0617a85b7883424ddb145ee63fe83ce2"
+  },
+  "_source": "https://github.com/Werkint/backbone-modelbinder.git",
+  "_target": "*",
+  "_originalSource": "backbone.modelbinder"
+}

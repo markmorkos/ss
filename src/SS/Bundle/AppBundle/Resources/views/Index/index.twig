@@ -1,0 +1,37 @@
+{% extends '@SSApp/layout.twig' %}
+            
+{% block content %}
+  <section class="promo mainPage">
+    <div class="center-holder">
+      <strong class="logo"><img src="{{ asset('images/logo.svg') }}"
+                                alt="SECURITY SCIENCE"></strong>
+    </div>
+  </section>
+  <main class="mainPage">
+    <div class="content-tabs"></div>
+    <aside class="info-block">
+      <div class="container">
+        <div class="row">
+          <div class="column">
+            <h3>contacts</h3>
+
+            <div class="text-holder">
+              <p>Kharkiv, Ukraine</p>
+            </div>
+            <div class="text-holder">
+              <div class="cell">
+                <p><a href="tel:+380000000000">+38 (000) 00 00 000</a><br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+  <footer class="main-footer">
+    <div class="content">
+      <span class="copyright">© 2016 SECURITY SCIENCE</span>
+    </div>
+  </footer>
+{% endblock %}

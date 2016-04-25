@@ -1,0 +1,11 @@
+$ cat .gitignore
+styles.css.map
+prepros.cfg
+*.xml
+*.xls
+*.log
+.idea/
+input/
+node_modules
+.sublime-gulp.cache
+Gulp Results

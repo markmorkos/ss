@@ -1,0 +1,22 @@
+<div class="row wrapper border-bottom wrapper-content">
+  <div class="col-lg-3">
+    <div class="ibox float-e-margins">
+      <div class="ibox-title">
+        <a href="#" class="add-project pull-right">Add page</a>
+        <h5>Pages</h5>
+      </div>
+      <div class="ibox-content item-tree">
+        <ul class="nav nav-tabs">
+          {% for page in pages.toArray() %}
+            <li class="{{ page.active?'active':'' }}"><a href="#">{{ page.name }} <span class="sr-only">(current)</span></a>
+            </li>
+          {% endfor %}
+        </ul>
+        <div id="jstree-proton-1" style="margin-top:20px;" class="proton-demo"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-9 item-edit-holder"></div>
+  <div class="col-lg-9 item-edit-gallery-holder"></div>
+</div>
+

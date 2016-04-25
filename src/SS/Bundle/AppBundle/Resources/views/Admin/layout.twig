@@ -1,0 +1,65 @@
+{% extends '::layout.twig' %}
+
+{% trans_default_domain "SSAppBundle" %}
+
+{% block titleBase -%}
+  {{ var.title }}: Admin:
+  {% block title -%}{%- endblock %}
+{%- endblock %}
+
+{% block baseMetatags %}
+  {{ parent() }}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endblock %}
+
+{% block baseScripts %}
+  {{ parent() }}
+  <script src="{{ asset('bundles/ssapp/inspinia/bootstrap.min.js') }}"></script>
+{% endblock %}
+
+{% block baseStyles %}
+  {{ parent() }}
+  <link href="{{ asset('bundles/werkintcmscore/bootstrap-3.3.2-dist/css/bootstrap.css') }}" rel="stylesheet">
+  <link href="{{ asset('bundles/werkintcmscore/bootstrap-3.3.2-dist/css/bootstrap-theme.css') }}" rel="stylesheet">
+  <link href="{{ asset('bundles/werkintcmscore/inspinia/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('bundles/werkintcmscore/inspinia/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
+  <link href="{{ asset('bundles/werkintcmscore/inspinia/css/animate.css') }}" rel="stylesheet">
+  <link href="{{ asset('bundles/werkintcmscore/inspinia/css/style.css') }}" rel="stylesheet">
+  <link href="{{ asset('bundles/werkintcmscore/inspinia/css/basic.css') }}" rel="stylesheet">
+  <link href="{{ asset('bundles/ssapp/inspinia/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('bundles/ssapp/inspinia/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
+  <link href="{{ asset('bundles/ssapp/jstree.css') }}" rel="stylesheet">
+  <link href="{{ asset('bundles/ssapp/wysiwyg.css') }}" rel="stylesheet">
+  <link href="{{ asset('bundles/ssapp/inspinia/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
+  <link href="{{ asset('bundles/ssapp/inspinia/css/animate.css') }}" rel="stylesheet">
+  <link href="{{ asset('bundles/ssapp/inspinia/css/style.css') }}" rel="stylesheet">
+  <link href="{{ asset('bundles/ssapp/inspinia/css/iCheck/custom.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block basePage %}
+  <div class="templates" id="global_page_templates" style="display: none">
+    {% twigjsresult %}
+  </div>
+  <div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+      <div class="sidebar-collapse">
+        <ul class="nav" id="side-menu">
+          <li class="nav-header">
+            <div class="dropdown profile-element">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <span class="clear"> <span class="block m-t-xs"> </span>
+                 </span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+      <div id="page_content">
+        {% block page %}{% endblock %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

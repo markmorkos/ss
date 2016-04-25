@@ -1,0 +1,17 @@
+{
+  "name": "werkint.highlightjs",
+  "dependencies": {
+    "highlightjs": "~8.5.0"
+  },
+  "main": [],
+  "homepage": "https://github.com/WerkintJs/highlightjs",
+  "_release": "6ba931dd40",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "6ba931dd40baa006d3137b09b8d73ca7fd551846"
+  },
+  "_source": "https://github.com/WerkintJs/highlightjs.git",
+  "_target": "*",
+  "_originalSource": "werkint-highlightjs"
+}

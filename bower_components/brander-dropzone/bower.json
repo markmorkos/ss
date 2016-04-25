@@ -1,0 +1,11 @@
+{
+  "name": "brander-dropzone",
+  "version": "4.0.1",
+  "authors": [
+    "Vladimir Odesskij <odesskij1992@gmail.com>"
+  ],
+  "ignore": [],
+  "dependencies": {
+    "dropzone": "4.0.1"
+  }
+}

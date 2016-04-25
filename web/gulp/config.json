@@ -1,0 +1,53 @@
+{
+  "preprocessor": "sass",
+  "autoprefixer": true,
+  "production": false,
+  "cms": "custom",
+  "host": "sirotov",
+  "browsers": [
+    "last 2 version",
+    "ie 10",
+    "ios 6",
+    "android 4"
+  ],
+
+  "browserSync": {
+    "enable": true,
+    "options": {
+      "templateReload": false,
+      "cssReload": true,
+      "jsReload": false,
+      "imagesReload": true
+    }
+  },
+
+  "assets": {
+
+    "styles" : {
+      "src" : "scss/",
+      "files": "scss/**/*.",
+      "dest": "css/"
+    },
+
+    "images": {
+      "src": "images/"
+    },
+
+    "cms_config": {
+      "magento": {
+        "skin": "./skin/frontend/",
+        "package": "nuna",
+        "theme": "default",
+        "template": "./app/design/frontend/"
+      },
+      "wordpress": {
+        "skin": "./wp-content/themes/",
+        "theme": "greenriver"
+      },
+      "custom": {
+        "skin": "./",
+        "template": "./app/views/**/*.twig"
+      }
+    }
+  }
+}

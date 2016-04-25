@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'monda';
+    src: url('@ReanimatorAppBundle/fonts/monda-bold-webfont.eot');
+    src: url('@ReanimatorAppBundle/fonts/monda-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@ReanimatorAppBundle/fonts/monda-bold-webfont.woff2') format('woff2'),
+         url('@ReanimatorAppBundle/fonts/monda-bold-webfont.woff') format('woff'),
+         url('@ReanimatorAppBundle/fonts/monda-bold-webfont.ttf') format('truetype'),
+         url('@ReanimatorAppBundle/fonts/monda-bold-webfont.svg#mondabold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'monda';
+    src: url('@ReanimatorAppBundle/fonts/monda-regular-webfont.eot');
+    src: url('@ReanimatorAppBundle/fonts/monda-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@ReanimatorAppBundle/fonts/monda-regular-webfont.woff2') format('woff2'),
+         url('@ReanimatorAppBundle/fonts/monda-regular-webfont.woff') format('woff'),
+         url('@ReanimatorAppBundle/fonts/monda-regular-webfont.ttf') format('truetype'),
+         url('@ReanimatorAppBundle/fonts/monda-regular-webfont.svg#mondaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'icomoon';
+    src:url('@ReanimatorAppBundle/fontsicomoon.eot?-8s0auc');
+    src:url('@ReanimatorAppBundle/fonts/icomoon.eot?#iefix-8s0auc') format('embedded-opentype'),
+        url('@ReanimatorAppBundle/fonts/icomoon.ttf?-8s0auc') format('truetype'),
+        url('@ReanimatorAppBundle/fonts/icomoon.woff?-8s0auc') format('woff'),
+        url('@ReanimatorAppBundle/fonts/icomoon.svg?-8s0auc#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-left:before {
+    content: "\e607";
+}
+.icon-1:before {
+    content: "\e600";
+}
+.icon-2:before {
+    content: "\e601";
+}
+.icon-3:before {
+    content: "\e602";
+}
+.icon-4:before {
+    content: "\e603";
+}
+.icon-5:before {
+    content: "\e604";
+}
+.icon-6:before {
+    content: "\e605";
+}
+.icon-star:before {
+    content: "\e606";
+}

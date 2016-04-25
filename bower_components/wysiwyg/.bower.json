@@ -1,0 +1,24 @@
+{
+  "name": "wysiwyg",
+  "dependencies": {
+    "requirejs.css": "*",
+    "dropzone": "*",
+    "jquery": "*"
+  },
+  "main": [
+    "wysiwyg.js",
+    "wysiwyg/wys.js",
+    "wysiwyg/wysiwyg.js",
+    "wysiwyg/wysiwyg.css"
+  ],
+  "homepage": "https://github.com/WerkintJs/wysiwyg",
+  "_release": "92ccb61279",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "92ccb612796dff33cd4bd3e3923272fa6aa6e7b8"
+  },
+  "_source": "https://github.com/WerkintJs/wysiwyg.git",
+  "_target": "*",
+  "_originalSource": "wysiwyg"
+}

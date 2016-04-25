@@ -1,0 +1,42 @@
+<div class="ibox float-e-margins">
+<div class="ibox-content">
+  <div class="form-group parent-control ">
+    <div class="holder">
+      <div class="row">
+
+        <div class="form-horizontal panel-body langs-body">
+          <label class="col-lg-2 control-label" for="1">Gallery</label>
+
+          <div class="col-lg-10">
+            {% if isMultiple %}
+              <div class="holder">
+                <div class="message-tip">
+                </div>
+                <ul class="drop-list {{ model.length>0?'':'empty' }}">
+                  {% for i, image in model.toArray %}
+                    <li class="added" data-ordinal="{{ i }}" data-image-id="{{ image.id }}">
+                      <div class="drop-item">
+                        <div class="heading">
+                          {% if isMultiple %}
+                            <a href="#remove" class="link-delete remove">{{ 'remove' }}</a>
+                          {% endif %}
+                        </div>
+                        <div class="img-holder">
+                          <img src="/uploads/projects/{{ image.name }}" alt="{{ image.hash }}"/>
+                        </div>
+                      </div>
+                    </li>
+                  {% endfor %}
+                  <li>
+                    {% include '@SSApp/Admin/imagesDrop.twig' %}
+                  </li>
+                </ul>
+              </div>
+            {% else %}
+              {% include '@SSApp/Admin/imagesDrop.twig' with {'image': model.toArray[0]} %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

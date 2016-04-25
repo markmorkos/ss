@@ -1,0 +1,27 @@
+ss_app:
+  resource: "@SSAppBundle/Resources/config/routing.yml"
+
+werkint_cms_core:
+  resource: "@WerkintCmsCoreBundle/Resources/config/routing.yml"
+
+fos_js_routing:
+  resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+bazinga_jstranslation:
+  resource: "@BazingaJsTranslationBundle/Resources/config/routing/routing.yml"
+  options:
+    expose: true
+
+login_check:
+  pattern:   /login_check
+logout:
+    path:   /logout
+
+oneup_uploader:
+  resource: .
+  type: uploader
+  options:
+    expose: true
+
+#_liip_imagine:
+#    resource: "@LiipImagineBundle/Resources/config/routing.xml"

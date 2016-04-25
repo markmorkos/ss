@@ -1,0 +1,16 @@
+{
+  "name": "requirejs.css",
+  "main": [
+    "css.js"
+  ],
+  "homepage": "https://github.com/WerkintJs/requirejs.css",
+  "_release": "57d261d845",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "57d261d845b116e9156000e324d86f08cbf9d59a"
+  },
+  "_source": "https://github.com/WerkintJs/requirejs.css.git",
+  "_target": "*",
+  "_originalSource": "requirejs.css"
+}

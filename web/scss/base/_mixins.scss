@@ -1,0 +1,39 @@
+%list{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+%after{
+	&:after{
+		content:"";
+		clear:both;
+		display:table;
+	}
+}
+@mixin center($value:false){
+	@if ($value == 'x') {
+		position: absolute;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		    -ms-transform: translateX(-50%);
+		        transform: translateX(-50%);
+	} @else if ($value == 'y'){
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		    -ms-transform: translateY(-50%);
+		        transform: translateY(-50%);
+	} @else {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%,-50%);
+		    -ms-transform: translate(-50%,-50%);
+		        transform: translate(-50%,-50%);
+	}
+}
+@mixin pholder($color){
+	::-moz-placeholder {color:$color; opacity: 1;}
+	:-ms-input-placeholder {color:$color;}
+	::-webkit-input-placeholder {color:$color;}
+}

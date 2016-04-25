@@ -1,0 +1,21 @@
+{
+  "name": "brander-dropzone",
+  "version": "4.0.1",
+  "authors": [
+    "Vladimir Odesskij <odesskij1992@gmail.com>"
+  ],
+  "ignore": [],
+  "dependencies": {
+    "dropzone": "4.0.1"
+  },
+  "homepage": "https://github.com/WerkintJs/dropzone",
+  "_release": "4.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v4.0.1",
+    "commit": "98d57c6cb2faa0a426f2ae4fffabdab08b87910d"
+  },
+  "_source": "https://github.com/WerkintJs/dropzone.git",
+  "_target": "4.0.1",
+  "_originalSource": "brander-dropzone"
+}

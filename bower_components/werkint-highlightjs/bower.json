@@ -1,0 +1,10 @@
+{
+    "name":         "werkint.highlightjs",
+    "version":      "0.0.1",
+    "dependencies": {
+        "highlightjs": "~8.5.0"
+    },
+    "main":         [
+
+    ]
+}

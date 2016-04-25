@@ -1,0 +1,57 @@
+# Doctrine Configuration
+# Doctrine ORM
+doctrine:
+  orm:
+    auto_generate_proxy_classes: %kernel.debug%
+    mappings:
+      gedmo_tree:
+        type: annotation
+        prefix: Gedmo\Tree\Entity
+        dir: %gedmo.lib.directory%/Gedmo/Tree/Entity
+        alias: GedmoTree
+        is_bundle: false
+
+      # Werkint
+      WerkintFrameworkExtraBundle: ~
+      SSAppBundle: ~
+      WerkintCmsCoreBundle: ~
+
+    resolve_target_entities: ~
+
+    filters:
+      softdeleteable:
+        class: Gedmo\SoftDeleteable\Filter\SoftDeleteableFilter
+        enabled: true
+  dbal:
+    default_connection:  default
+    connections:
+      default:
+        driver:   pdo_mysql
+        host:     localhost
+        port:     ~
+        dbname:   %database_name%
+        user:     %database_user%
+        password: %database_password%
+        charset:  UTF8
+
+# Service classes
+parameters:
+  gedmo.lib.directory:
+    %kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib
+
+# Support for Trees in doctrine2
+stof_doctrine_extensions:
+  default_locale: %locale%
+  translation_fallback: true
+  orm:
+    default:
+      translatable: true
+      timestampable: true
+      tree: true
+      softdeleteable: true
+monolog:
+  handlers:
+    main:
+      type: stream
+      path: %kernel.root_dir%/logs/app.log
+      level: debug

@@ -1,0 +1,19 @@
+{
+  "name": "twig",
+  "moduleType": [
+    "amd"
+  ],
+  "main": [
+    "twig.js"
+  ],
+  "homepage": "https://github.com/WerkintJs/twig",
+  "_release": "af4ffee82f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "af4ffee82f8c962b50757d17dd7f790e23001942"
+  },
+  "_source": "https://github.com/WerkintJs/twig.git",
+  "_target": "*",
+  "_originalSource": "twig"
+}

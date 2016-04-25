@@ -1,0 +1,45 @@
+parameters:
+  ss_app.file_url_manager.class:
+      SS\Bundle\AppBundle\Service\Util\FileUrlManager
+  ss_app.uploader.class:
+      SS\Bundle\AppBundle\EventListener\UploadListener
+  ss_app.file.filemanager.class:
+      SS\Bundle\AppBundle\Service\File\FileManager
+
+services:
+  # Twig - основное расширение сайта
+  ss_app.twig.appextension:
+    class: SS\Bundle\AppBundle\Service\Twig\SSAppExtension
+    public: false
+    arguments:
+      -
+        globals:
+          var:
+            title: @=parameter('app.title')
+            domain: @=parameter('app.defaulthost')
+          assets_version: @=parameter('werkint_lastcommithash')
+      - @ss_app.file_url_manager
+      - @security.token_storage
+    tags:
+      - { name: twig.extension }
+  ss_app.faker.factory:
+      class: SS\Bundle\AppBundle\Service\FakerFactory
+  ss_app.faker:
+      class:            Faker\Generator
+      factory_service:  ss_app.faker.factory
+      factory_method:   create
+      arguments: [ru_RU]
+  ss_app.repo.image:
+      class:            SS\Bundle\AppBundle\Entity\ImageRepository
+      factory_service:  doctrine.orm.entity_manager
+      factory_method:   getRepository
+      arguments: [SSAppBundle:Image]
+  ss_app.repo.page:
+      class:            SS\Bundle\AppBundle\Entity\PageRepository
+      factory_service:  doctrine.orm.entity_manager
+      factory_method:   getRepository
+      arguments: [SSAppBundle:Page]
+  kernel.listener.redirect:
+      class:  SS\Bundle\AppBundle\EventListener\RedirectException
+      tags:
+          - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }

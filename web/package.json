@@ -1,0 +1,44 @@
+{
+  "name": "GulpIt!",
+  "version": "0.1.0",
+  "description": "by Landen",
+  "devDependencies": {
+    "browser-sync": "^2.7.3",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-cached": "^1.0.4",
+    "gulp-combine-media-queries": "^0.2.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-csscomb": "^3.0.3",
+    "gulp-filter": "^2.0.2",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-inject": "^1.2.0",
+    "gulp-less": "^3.0.2",
+    "gulp-load-plugins": "^0.9.0",
+    "gulp-minify-css": "^1.0.0",
+    "gulp-progeny": "0.0.7",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "^1.5.1",
+    "gulp-svgmin": "^1.1.2",
+    "gulp-svgstore": "^5.0.1",
+    "gulp-uglify": "^1.2.0",
+    "gulp-watch": "^4.2.3",
+    "gulp.spritesmith": "^3.5.3",
+    "imagemin-jpeg-recompress": "^4.2.1",
+    "imagemin-pngquant": "^4.0.0"
+  },
+  "author": {
+    "name": "Landen",
+    "email": "landenmetal@gmail.com",
+    "url": "http://vk.com/landen13"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/Landen/gulp-it"
+  },
+  "engines": {
+    "node": "=>0.10.22"
+  },
+  "license": "MIT"
+}

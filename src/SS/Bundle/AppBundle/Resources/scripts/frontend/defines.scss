@@ -1,0 +1,79 @@
+@import "extends";
+@import "elements";
+/**
+ * Файл SASS-mixins и основных настроек
+ */
+$global-width: 75rem;
+
+$global-footer-height: 3rem;
+$global-header-bartop-height: 4rem;
+$global-header-barbottom-height: 0;
+$global-header-height: $global-header-bartop-height + $global-header-barbottom-height;
+$font-family: DejaVu Sans, Arial, sans-serif;
+$font-family-mono: DejaVu Sans Mono, monospace;
+$krolik-color-genericcontrol: #43a09c;
+$krolik-color-genericcontrol-light: #43a09c;
+$krolik-color-genericcontrol-dark: #3d8a85;
+$global-width-responsive: 35rem !global;
+$global-responsive-query: "(max-width: #{$global-width-responsive}), (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5) ";
+
+@mixin global-button-general($color-bg: $krolik-color-genericcontrol) {
+  color: white;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  padding: .65em .9em;
+  background: $color-bg;
+  cursor: pointer;
+  &:not([disabled]):hover {
+    background: lighten($color-bg, 10%);
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+  }
+  &:not(button).loading, &[disabled] {
+    background: #c6c1b9;
+    border-bottom-color: #918c86;
+    cursor: default;
+    &.loading {
+      color: transparent !important;
+      cursor: default;
+    }
+  }
+  &.thin {
+    padding: .1em 1.3em;
+  }
+}
+@mixin global-button($color-bg: $krolik-color-genericcontrol, $color-border: $krolik-color-genericcontrol-dark) {
+  @include global-button-general($color-bg);
+  color: white;
+  border-radius: 5px 5px 6px 5px;
+  border-bottom: solid .2em $color-border;
+}
+@mixin global-input-focused {
+  box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+  border: 1px solid #5897fb;
+}
+.global-preloadable {
+  &::before {
+    content: "";
+    display: none !important;
+    width: 3em;
+    height: 3em;
+    margin: 2em auto;
+    background-size: auto 90%;
+    color: transparent;
+  }
+  &:not(.loaded) {
+    & > * {
+      display: none !important;
+    }
+    &::before {
+      display: block !important;
+    }
+  }
+}
+// TODO: remove
+.grayscale {
+  opacity: .5;
+}

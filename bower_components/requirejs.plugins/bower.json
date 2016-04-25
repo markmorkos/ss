@@ -1,0 +1,12 @@
+{
+    "name":         "requirejs.plugins",
+    "version":      "0.0.1",
+    "dependencies": {
+        "requirejs-plugins": "*",
+        "requirejs.css": "*",
+        "requirejs.domready": "*"
+    },
+    "main":         [
+        "overrides.json"
+    ]
+}

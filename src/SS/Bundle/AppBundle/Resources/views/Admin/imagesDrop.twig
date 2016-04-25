@@ -1,0 +1,17 @@
+<div class="drop-item uploadable">
+  {% if not (clean is defined and clean) %}
+    {% if image is not defined or not image %}
+      <div class="heading">
+      </div>
+    {% endif %}
+  {% endif %}
+  <div class="img-holder">
+    {% if image is defined and image.uri %}
+      <img src="/uploads/gallery/{{ image.name }}" alt="{{ image.hash }}"/>
+    {% elseif not (clean is defined and clean) %}
+      <a href="#" class="placeholder">
+      </a>
+    {% endif %}
+  </div>
+  <div class="dropzone" multiple></div>
+</div>

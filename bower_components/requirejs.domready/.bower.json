@@ -1,0 +1,19 @@
+{
+  "name": "requirejs.domready",
+  "dependencies": {
+    "requirejs-domready": "*"
+  },
+  "main": [
+    "overrides.json"
+  ],
+  "homepage": "https://github.com/WerkintJs/requirejs.domready",
+  "_release": "c59e861959",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c59e861959cd0613082605e8f889ffec150bfe84"
+  },
+  "_source": "https://github.com/WerkintJs/requirejs.domready.git",
+  "_target": "*",
+  "_originalSource": "requirejs.domready"
+}

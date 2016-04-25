@@ -1,0 +1,21 @@
+{
+  "name": "jquery.textrange",
+  "version": "1.3.3",
+  "authors": [
+    "Vladimir Odesskij <odesskij1992@gmail.com>"
+  ],
+  "ignore": [],
+  "dependencies": {
+    "jquery-textrange": "~1.3.3"
+  },
+  "homepage": "https://github.com/WerkintJs/jquery.textrange",
+  "_release": "1.3.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.3.3",
+    "commit": "b906dfa6ddbb6244a8f2daa28f12e3b67d9968b0"
+  },
+  "_source": "https://github.com/WerkintJs/jquery.textrange.git",
+  "_target": "*",
+  "_originalSource": "jquery.textrange"
+}

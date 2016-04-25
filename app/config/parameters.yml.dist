@@ -1,0 +1,32 @@
+parameters:
+  database_driver:   pdo_mysql
+  database_host:     localhost
+  database_port:     ~
+  database_name:     symfony-cms
+  database_user:     root
+  database_password: ~
+
+  mailer_transport: smtp
+  mailer_host:      localhost
+  mailer_user:      ~
+  mailer_password:  ~
+  mailer_port:      587
+
+
+  app.title: "cms-skeleton"
+  app.name:  "cms-skeleton"
+  app.defaulthost: %app.name%.o.o
+  app.email.support: support@%app.defaulthost%
+  app.email.contact: contact@%app.defaulthost%
+  app.email.noreply: noreply@%app.defaulthost%
+  app.email.admin: ~
+
+  secret:            ThisTokenIsNotSoSecretChangeItCms
+
+  timezone: "Europe/Kiev"
+
+  werkint_redis_pass: ~
+  prerender_backend_url: http://gamma.branderstudio.com:3000
+
+  admin_login: admin
+  admin_password: password

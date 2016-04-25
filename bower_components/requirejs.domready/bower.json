@@ -1,0 +1,10 @@
+{
+    "name":         "requirejs.domready",
+    "version":      "0.0.1",
+    "dependencies": {
+        "requirejs-domready": "*"
+    },
+    "main":         [
+        "overrides.json"
+    ]
+}

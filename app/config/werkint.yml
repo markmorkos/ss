@@ -1,0 +1,24 @@
+werkint_framework_extra:
+  security: true
+  requirejs: true
+  trailing_slash: true
+  langs:
+    nolangredirect: false
+    supported: %locales_supported%
+
+#werkint_redis:
+#  project: %app.name%
+#  connection:
+#    pass:  %werkint_redis_pass%
+
+werkint_webapp:
+  respath: %app.path.webres%/cached
+  resdir:  %kernel.root_dir%/../web%app.path.webres%/cached
+  revpath: %kernel.root_dir%/cache/revision
+  project: %app.name%
+  browsers:
+    warn: true
+  filters:
+    css:
+      - cssurls
+    js: ~

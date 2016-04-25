@@ -1,0 +1,56 @@
+{
+    "name":"backbone-chaining",
+    "filename":"backbone-chaining.min.js",
+    "description":"Supports attribute chains in get(), set(), and on()/off()",
+    "url":"https://github.com/ronen/backbone-chaining/",
+    "homepage":"https://github.com/ronen/backbone-chaining/",
+    "keywords":["Backbone", "attributes", "events", "paths"],
+    "author":["Ronen Barzel"],
+    "dependencies":{
+        "backbone":">=1.0.0",
+        "underscore": ">=1.0.0"
+    },
+    "devDependencies":{
+        "jquery":"<2.0.0",
+        "lodash":">=2.4.1",
+        "phantomjs":">=1.9.0",
+        "qunitjs":"=1.11.0",
+        "requirejs":">=2.1.14",
+        "underscore":">=1.6.0"
+    },
+    "jam":{
+        "dependencies":{
+            "backbone":">=1.0.0"
+        },
+        "main":"backbone-chaining.js",
+        "include":[
+            "backbone-chaining.js",
+            "backbone-chaining-min.js",
+            "README.md",
+            "CHANGELOG.md"
+        ]
+    },
+    "scripts":{
+        "test": "npm run test-underscore && npm run test-lodash && npm run test-requirejs && npm run test-commonjs",
+        "test-underscore":"phantomjs test/lib/runner-qunit.js test/test-suite-underscore.html?noglobals=true",
+        "test-lodash":"phantomjs test/lib/runner-qunit.js test/test-suite-lodash.html?noglobals=true",
+        "test-requirejs":"phantomjs test/lib/runner-plain.js test/test-sanity-requirejs.html",
+        "test-commonjs":"phantomjs test/test-sanity-commonjs.js"
+    },
+    "main":"backbone-chaining.js",
+    "version": "0.1.4",
+    "repository":"git://github.com/ronen/backbone-chaining.git",
+    "licenses":[
+        {
+            "type":"MIT",
+            "url":"https://github.com/ronen/backbone-chaining/blob/master/LICENSE.txt"
+        }
+    ],
+    "contributors":[
+        {
+            "name":"Ronen Barzel",
+            "web":"https://github.com/ronen"
+        }
+    ],
+    "github":"https://github.com/ronen/backbone-chaining/"
+}

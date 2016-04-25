@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ var.title }} | Login</title>
+
+  <link href="{{ asset('/bundles/ssapp/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('/bundles/ssapp/bootstrap/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('/bundles/ssapp/bootstrap/css/animate.css') }}" rel="stylesheet">
+  <link href="{{ asset('/bundles/ssapp/bootstrap/css/style.css') }}" rel="stylesheet">
+
+</head>
+<body class="gray-bg">
+<div class="middle-box text-center loginscreen  animated fadeInDown">
+  <div>
+    <h3>{{ var.title }}</h3>
+    <p>{{ var.domain }}</p>
+
+    <form class="m-t" role="form" method="POST" action="{{ path('login_check') }}">
+      <div class="form-group">
+        <input type="text" name="_username" class="form-control" placeholder="Username" required="">
+      </div>
+      <div class="form-group">
+        <input type="password" name="_password" class="form-control" placeholder="Password" required="">
+      </div>
+      <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+    </form>
+  </div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="{{ asset('/bundles/ssapp/bootstrap/js/jquery-2.1.1.js') }}"></script>
+<script src="{{ asset('/bundles/ssapp/bootstrap/js/bootstrap.min.js') }}"></script>
+
+</body>
+
+</html>

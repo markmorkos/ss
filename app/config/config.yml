@@ -1,0 +1,172 @@
+imports:
+  - { resource: parameters.yml }
+  - { resource: werkint.yml }
+  - { resource: doctrine.yml }
+  - { resource: security.yml }
+  - { resource: parameters_hash.yml }
+  - { resource: ../../vendor/nick4fake/doctrine-behaviors/config/orm-services.yml }
+
+parameters:
+  jms_serializer.camel_case_naming_strategy.class:
+    JMS\Serializer\Naming\IdenticalPropertyNamingStrategy
+  # TODO: remove
+  knp.doctrine_behaviors.translatable_subscriber.translatable_trait:
+    Knp\DoctrineBehaviors\Model\Translatable\TranslatableMethods
+  knp.doctrine_behaviors.timestampable_subscriber.timestampable_trait:
+    Knp\DoctrineBehaviors\Model\Timestampable\TimestampableMethods
+  knp.doctrine_behaviors.translatable_subscriber.translation_trait:
+    Werkint\Bundle\FrameworkExtraBundle\Model\Translation
+
+  session_expire: 63072000 # 365*2 days in seconds
+  app.assets_version: %werkint_lastcommithash%
+  # Router
+  router.request_context.host:  %app.defaulthost%
+  router.request_context.scheme: https
+  router.request_context.base_url: ""
+  # App default directories
+  app.path.webres: /res
+  app.path.img:    %app.path.webres%/img
+  app.dir.web:     %kernel.root_dir%/../web
+  locale: en
+  locales_supported:
+    - en
+    - ru
+    - es
+  locales_supported_full:
+    en: en_US
+    ru: ru_RU
+    es: es_ES
+  # Sprites
+  app.path.sprites:   %app.path.img%/sprites
+  app.dir.sprites:    %app.dir.web%%app.path.sprites%
+  app.sprites.styles: %app.dir.sprites%/styles.scss
+
+
+
+# Generic framework config
+framework:
+  secret: %secret%
+  router:
+    resource: %kernel.root_dir%/config/routing.yml
+    strict_requirements: %kernel.debug%
+  request:
+    formats:
+      scss: "text/css"
+  form: true
+  csrf_protection: true
+  trusted_hosts: [".*"]
+  validation:
+    enabled: true
+    enable_annotations: true
+  templating:
+    engines: ["twig"]
+    assets_version: %app.assets_version%
+    assets_version_format: "%%s?bust=%%s"
+  fragments:       ~
+  # Important for file uploading
+  http_method_override: false
+  # Storing sessions in Redis
+  session:
+#    handler_id: werkint.redis.session
+    cookie_lifetime: %session_expire%
+    gc_maxlifetime: %session_expire%
+#  annotations:
+#    cache:  werkint.redis.doctrinecacher
+
+# Twig templater
+twig:
+  debug:             %kernel.debug%
+  strict_variables:  %kernel.debug%
+  base_template_class: Werkint\Bundle\WebappBundle\Twig\Extension\Template
+  globals:
+    assets_version: %app.assets_version%
+
+# Disabling some standart behaviour
+sensio_framework_extra:
+  view:
+    annotations: false
+assetic:
+  debug: %kernel.debug%
+  use_controller:
+    enabled: %kernel.debug%
+    profiler: false
+jms_di_extra:
+  doctrine_integration: false
+  locations:
+    all_bundles: false
+
+# RESTful controllers
+fos_rest:
+  serializer:
+    serialize_null: false # Важно для десериализации объектов из JSON
+  view:
+    view_response_listener: true
+    mime_types:
+      pdf: application/pdf
+    formats:
+      json: true
+    templating_formats:
+      html: true
+      pdf: true
+  body_listener: true
+  body_converter:
+    enabled: true
+    validate: true
+    validation_errors_argument: validationErrors
+  format_listener:
+    rules:
+      - { path: '^/.*\.pdf', priorities: [pdf] }
+      - { path: '^/', fallback_format: json, stop: true }
+
+# Swiftmailer Configuration
+swiftmailer:
+  host: 178.159.110.48
+  port: 587
+  username: brander
+  password: Aes0eechuo6eer8Zo7nuighephu4Mohgh7shinoo
+  encryption: tls
+
+# Using translations on client-side
+bazinga_js_translation:
+  locale_fallback: %locale%
+
+services: # TODO: check
+  jms_serializer.object_constructor:
+    alias: jms_serializer.doctrine_object_constructor
+    public: false
+
+jms_serializer:
+
+yucca_prerender:
+  backend_url: %prerender_backend_url%
+  ignored_extensions: ['.scss', '.pdf']
+  crawler_user_agents: ['yandex', 'baiduspider', 'facebookexternalhit', 'twitterbot', 'googlebot']
+
+oneup_uploader:
+  mappings:
+    cms:
+      frontend: dropzone
+      enable_progress: true
+    projects:
+      frontend: dropzone
+      enable_progress: true
+    journals:
+      frontend: dropzone
+      enable_progress: true
+    slider:
+      frontend: dropzone
+      enable_progress: true
+    p-mini:
+      frontend: dropzone
+      enable_progress: true
+    j-mini:
+      frontend: dropzone
+      enable_progress: true
+
+services:
+  gedmo.listener.softdeleteable:
+    class: Gedmo\SoftDeleteable\SoftDeleteableListener
+    tags:
+        - { name: doctrine.event_subscriber, connection: default }
+    calls:
+        - [ setAnnotationReader, [ @annotation_reader ] ]

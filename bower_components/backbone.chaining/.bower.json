@@ -1,0 +1,16 @@
+{
+  "name": "backbone.chaining",
+  "main": [
+    "overrides.json"
+  ],
+  "homepage": "https://github.com/WerkintJs/backbone.chaining",
+  "_release": "587d2f3837",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "587d2f38370504d1b600a35dd04f71b8134adcf5"
+  },
+  "_source": "https://github.com/WerkintJs/backbone.chaining.git",
+  "_target": "*",
+  "_originalSource": "backbone.chaining"
+}

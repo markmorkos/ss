@@ -1,0 +1,11 @@
+{
+    "name":         "jquery.slick",
+    "version":      "0.0.1",
+    "dependencies": {
+        "requirejs.css":  "*",
+        "slick-carousel": "*"
+    },
+    "main":         [
+        "jquery.slick.js"
+    ]
+}

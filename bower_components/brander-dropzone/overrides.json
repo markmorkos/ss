@@ -1,0 +1,11 @@
+{
+  "renames": {
+    "dropzone-amd-module": "dropzone"
+  },
+  "dropzone": {
+    "main": [
+      "./dist/dropzone.css",
+      "./dist/dropzone-amd-module.js"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "name":         "backbone.chaining",
+    "version":      "0.0.1",
+    "main":         [
+        "overrides.json"
+    ]
+}

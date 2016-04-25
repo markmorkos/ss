@@ -1,0 +1,9 @@
+<div>
+  <ul>
+    {% for img in images %}
+    <li>
+      <img src="{{ img|file_url }}">
+    </li>
+    {% endfor %}
+  </ul>
+</div>

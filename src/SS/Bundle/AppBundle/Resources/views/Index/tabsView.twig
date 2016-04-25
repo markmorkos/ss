@@ -1,0 +1,12 @@
+<div class="tabs">
+  <ul class="tabset">
+    {% for i, row in pages %}
+      <li data-target="{{ row.tab }}" {% if loop.first %}class="active"{% endif %}><a href="#tab-{{ row.tab }}"><strong>{{ row.name }}</strong></a></li>
+    {% endfor %}
+  </ul>
+  <div class="tab-content">
+    {% for i, row in pages %}
+    <div id="tab-{{ row.tab }}"></div>
+    {% endfor %}
+  </div>
+</div>

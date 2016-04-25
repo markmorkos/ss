@@ -1,0 +1,11 @@
+{
+  "name": "jquery.elastic",
+  "version": "1.6.11",
+  "authors": [
+    "Vladimir Odesskij <odesskij1992@gmail.com>"
+  ],
+  "ignore": [],
+  "dependencies": {
+    "jakobmattsson-jquery-elastic": "~1.6.11"
+  }
+}

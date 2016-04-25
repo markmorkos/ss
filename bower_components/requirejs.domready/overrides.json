@@ -1,0 +1,7 @@
+{
+  "requirejs-domready": {
+    "main": [
+      "domReady.js"
+    ]
+  }
+}

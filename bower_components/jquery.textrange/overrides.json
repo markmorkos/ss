@@ -1,0 +1,10 @@
+{
+  "renames": {
+    "jquery-textrange": "jquery.textrange"
+  },
+  "jquery-textrange": {
+    "main": [
+      "jquery-textrange.js"
+    ]
+  }
+}

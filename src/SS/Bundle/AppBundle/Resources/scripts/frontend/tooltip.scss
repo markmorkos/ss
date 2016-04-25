@@ -1,0 +1,177 @@
+@import "variables";
+@import "mixins";
+* {
+  &:hover > .tooltip,
+  &.hover > .tooltip {
+    display: block;
+  }
+  &:hover > .tooltip.right,
+  &.hover > .tooltip.right {
+    left: 100%;
+  }
+  &:hover > .tooltip.left,
+  &.hover > .tooltip.left {
+    right: 100%;
+  }
+  &:hover > .tooltip.top,
+  &.hover > .tooltip.top {
+    bottom: 100%;
+    left: 50%;
+  }
+  &:hover > .tooltip.bottom,
+  &.hover > .tooltip.bottom {
+    top: 100%;
+    left: 50%;
+  }
+}
+.tooltip {
+  position: absolute;
+  z-index: 10000;
+  width: 250px;
+  color: #444;
+  display: none;
+  padding: 13px 10px 6px;
+  background: #f5fff2;
+  border: 2px solid #c0dbb8;
+  line-height: 18px;
+  border-radius: 2px;
+  &.icon-tooltip {
+    padding-left: 36px !important;
+    &:after {
+      position: absolute;
+      content: "";
+      top: 14px;
+      left: 11px;
+      background: url(#{$imgurl}/messages.png) no-repeat -17px 0;
+      width: 16px;
+      height: 16px;
+      color: #fff;
+    }
+  }
+  .grey & {
+    border-color: #c1c1c1;
+    background: #f2f2f2;
+    &.right:before {
+      border-right-color: #c1c1c1;
+    }
+    &.left:before {
+      border-left-color: #c1c1c1;
+    }
+    &.top:before {
+      border-top-color: #c1c1c1;
+    }
+    &.bottom:before {
+      border-bottom-color: #c1c1c1;
+    }
+  }
+  &.error {
+    border-color: #ffbaa5;
+    background: #ffeee9;
+    &.right:before {
+      border-right-color: #ffbaa5;
+    }
+    &.left:before {
+      border-left-color: #ffbaa5;
+    }
+    &.bottom:before {
+      border-bottom-color: #ffbaa5;
+    }
+    &.top:before {
+      border-top-color: #ffbaa5;
+    }
+    &.icon-tooltip:after {
+      background-position: 0 0;
+    }
+  }
+  &.right {
+    margin-left: 8px;
+    padding: 9px 10px 4px;
+    top: 0;
+    left: 9999px;
+    &.icon-tooltip:after {
+      top: 11px;
+    }
+    .tooltip-opener & {
+      $pad: 17px;
+      top: -$pad;
+      &:before {
+        top: $pad;
+      }
+    }
+    &:before {
+      top: 12px;
+      left: -8px;
+      border-right-color: #c0dbb8;
+      border-width: 6px 6px 6px 0;
+    }
+  }
+  &.left {
+    padding: 9px 10px 4px;
+    margin-right: 8px;
+    top: 0;
+    right: 9999px;
+    &.icon-tooltip:after {
+      top: 11px;
+    }
+    &.icon-tooltip {
+      padding-right: 36px;
+      &:after {
+        right: 11px;
+      }
+    }
+    .tooltip-opener & {
+      $pad: 17px;
+      top: -$pad;
+      &:before {
+        top: $pad;
+      }
+    }
+    &:before {
+      top: 12px;
+      right: -8px;
+      border-left-color: #c0dbb8;
+      border-width: 6px 0 6px 6px;
+    }
+  }
+  &.top {
+    margin-bottom: 8px;
+    left: -9999px;
+    bottom: -9999px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    &:before {
+      left: 50%;
+      bottom: -8px;
+      margin-left: -6px;
+      border-top-color: #c0dbb8;
+      border-width: 6px 6px 0;
+    }
+  }
+  &.bottom {
+    margin-top: 8px;
+    left: -9999px;
+    top: -9999px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    &:before {
+      left: 50%;
+      top: -8px;
+      margin-left: -6px;
+      border-bottom-color: #c0dbb8;
+      border-width: 0 6px 6px;
+    }
+  }
+  pointer-events: none;
+  text-align: left;
+  p {
+    margin: 0 0 5px;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: transparent;
+  }
+}

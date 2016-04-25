@@ -1,0 +1,29 @@
+services:
+  ss_app.uploader:
+    class: SS\Bundle\AppBundle\EventListener\UploadListener
+    arguments:
+      - @doctrine.orm.entity_manager
+      - @ss_app.image_manager
+      - @ss_app.file_url_manager
+      - @ss_app.file.filemanager
+    tags:
+      - { name: kernel.event_listener, event: oneup_uploader.post_persist, method: onUpload }
+  ss_app.file_url_manager:
+      class: SS\Bundle\AppBundle\Service\Util\FileUrlManager
+      arguments:
+        - %kernel.root_dir%
+  ss_app.image_manager:
+      class: Intervention\Image\ImageManager
+      arguments:
+        - { driver: imagick } ### Image driver GD Library or Imagick PHP extension
+  ss_app.file.filemanager:
+      class: SS\Bundle\AppBundle\Service\Util\FileManager
+      arguments:
+        - @doctrine.orm.entity_manager
+        - @ss_app.image_manager
+  ss_app.file.programmaticfileuploader:
+    class: SS\Bundle\AppBundle\Service\Util\ProgrammaticFileUploader
+    arguments:
+      - @ss_app.file.filemanager
+      - @ss_app.file_url_manager
+      - %app.dir.web%

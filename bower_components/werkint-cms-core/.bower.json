@@ -1,0 +1,21 @@
+{
+  "name": "werkint-cms-core",
+  "main": "bower.json",
+  "dependencies": {
+    "brander-dropzone": "*",
+    "jquery.elastic": "*",
+    "jquery.jstree": "*",
+    "jquery.textrange": "*",
+    "jquery.tabbable": "*",
+    "backbone.marionette": "*",
+    "wysiwyg": "*",
+    "twig": "*",
+    "werkint-highlightjs": "*"
+  },
+  "ignore": [
+    "**/*"
+  ],
+  "_source": "/home/ekaterina/sites/diploma/vendor/werkint/cms-core-bundle/src/bower.json",
+  "_target": "*",
+  "_originalSource": "/home/ekaterina/sites/diploma/vendor/werkint/cms-core-bundle/src/bower.json"
+}

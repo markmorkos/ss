@@ -1,0 +1,21 @@
+{
+  "name": "jquery.jstree",
+  "dependencies": {
+    "requirejs.css": "*",
+    "jquery": "*"
+  },
+  "main": [
+    "jquery.jstree.js",
+    "jstree/*"
+  ],
+  "homepage": "https://github.com/WerkintJs/jquery.jstree",
+  "_release": "5867607da1",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "5867607da106155c58a8de24c12ea8a338350743"
+  },
+  "_source": "https://github.com/WerkintJs/jquery.jstree.git",
+  "_target": "*",
+  "_originalSource": "jquery.jstree"
+}

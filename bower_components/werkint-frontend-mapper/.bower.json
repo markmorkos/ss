@@ -1,0 +1,17 @@
+{
+  "name": "werkint-frontend-mapper",
+  "main": "bower.json",
+  "dependencies": {
+    "requirejs-plugins": "*",
+    "lodash": "*",
+    "backbone": "*",
+    "backbone.relational": "*",
+    "backbone.modelbinder": "*"
+  },
+  "ignore": [
+    "**/*"
+  ],
+  "_source": "/home/ekaterina/sites/diploma/vendor/werkint/frontend-mapper-bundle/src/bower.json",
+  "_target": "*",
+  "_originalSource": "/home/ekaterina/sites/diploma/vendor/werkint/frontend-mapper-bundle/src/bower.json"
+}

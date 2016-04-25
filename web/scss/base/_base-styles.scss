@@ -1,0 +1,59 @@
+@import 'variables';
+@import 'mixins';
+@import 'reset';
+
+html,body{min-width: 320px;height: 100%;}
+body {
+	margin:0;
+	color: $baseColor;
+	font:300 16px/24px $sans-serif;
+	background: #232323;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: none;
+}
+a {
+	text-decoration: none;
+	color: $linkColor;
+	outline: none;
+	transition:color 0.25s ease,background 0.25s ease;
+	&:hover{
+		text-decoration: none;
+		color:darken($linkColor, 15%);
+	}
+}
+input,textarea,select,button {
+	font: 16px/18px $sans-serif;
+	vertical-align: middle;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="password"],
+textarea{
+	display: block;
+	width: 100%;
+	border: 1px solid #ccc;
+	font-size: 18px;
+	line-height: 20px;
+	padding: 11px 16px;
+	height: 44px;
+	background: #fff;
+	color: #232323;
+	margin: 0 0 20px;
+	box-shadow: none;
+	-webkit-appearance:none;
+}
+textarea {
+	resize: vertical;
+	overflow: auto;
+	vertical-align: top;
+	max-width: 100%;
+	width: 100% !important;
+	height: 100px !important;
+}
+form{
+	@include pholder(#232323);
+}
+h1,h2,h3,h4,h5,h6{font-weight: normal;color: #737373;}
+p{margin: 0 0 1em;}

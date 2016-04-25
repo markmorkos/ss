@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}" {% block html_attributes %}class="no-js"{% endblock %}>
+<head>
+  <link rel="icon" href="{{ asset('bundles/ssapp/images/fav.ico') }}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ asset('bundles/ssapp/images/fav.ico') }}" type="image/x-icon">
+
+  {% block baseHead %}
+    <title>{% block basetitle %}SECURITY SCIENCE{% endblock %}{% if block('title') %} | {% endif %}{% block title %}{% endblock %}</title>
+  {% block baseScripts %}
+    <script src="{{ asset('assets/js/require.js') }}"></script>
+    <script src="{{ asset('bundles/ssapp/config.js') }}"></script>
+    {% block baseJsGlobals %}
+      {% include '::/global/js-globals.twig' %}
+    {% endblock %}
+
+    {% block global_js %}
+    {% endblock %}
+
+  {% endblock %}
+
+  {% block baseStyles %}
+    <link rel="stylesheet" href="{{ asset('styles.css') }}">
+  {% endblock %}
+
+  {% block baseMetatags %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index">
+  {% endblock %}
+
+    {{ webapp_head_init() }}
+    {% block head %}{% endblock %}
+  {% endblock %}
+</head>
+<body>
+<div class="wrapper">
+  {% spaceless %}
+    {% block basePage %}
+      <div class="templates" id="global_page_templates" style="display: none">
+        {% twigjsresult %}
+      </div>
+
+      {% block content %}
+      {% endblock %}
+
+    {% endblock %}
+  {% endspaceless %}
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "requirejs.plugins",
+  "dependencies": {
+    "requirejs-plugins": "*",
+    "requirejs.css": "*",
+    "requirejs.domready": "*"
+  },
+  "main": [
+    "overrides.json"
+  ],
+  "homepage": "https://github.com/WerkintJs/requirejs.plugins",
+  "_release": "d81e870ad4",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "d81e870ad40c0e4122e310f9d50cefdee8644066"
+  },
+  "_source": "https://github.com/WerkintJs/requirejs.plugins.git",
+  "_target": "*",
+  "_originalSource": "requirejs.plugins"
+}
