@@ -6,8 +6,6 @@ requirejs([
 ], function ($, BaseView, PageCollection) {
     'use strict';
 
-    console.log('11111111111111111');
-
     var pages = new PageCollection();
     pages.fetch();
 

@@ -2,8 +2,8 @@ define([
     'jquery',
     'templating',
     'backbone',
-    'ss-app/views/pageView',
-    'ss-app/imageCollection',
+    'ss-app/index/views/pageView',
+    'ss-app/index/imageCollection',
     'jquery/tabslet'
 ], function ($, templating, Backbone, PageView,  ImagesCollection) {
     'use strict';

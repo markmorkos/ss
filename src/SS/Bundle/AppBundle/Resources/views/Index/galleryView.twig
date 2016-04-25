@@ -2,7 +2,7 @@
   <ul>
     {% for img in images %}
     <li>
-      <img src="{{ img|file_url }}">
+      <img src="{{ img.url }}">
     </li>
     {% endfor %}
   </ul>
